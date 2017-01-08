@@ -1,0 +1,138 @@
+/*base styles for entire page*/
+
+/*styles*/
+
+
+/*general style for the entire page*/
+*{
+/*this will make all box sizes actuall including any padding*/
+  box-sizing: border-box;
+  margin:0;
+}
+
+
+/*unique styles*/
+
+header{
+width: 100%;
+padding: 20px;
+text-align: center;
+position: relative;
+
+}
+
+div {
+  position: relative;
+  width: 26.7%;
+  height: 100px;
+  float: left;
+  margin: 2.5%;
+}
+
+div>h1{
+  /*fix the width of the smaller h1 tags*/
+  position: absolute;
+  float: right;
+  width: 50%;
+  top: 0px;
+  right: 0px;
+  margin: 0px;/*if you dont do this the top will not lap*/
+  text-align: center;
+  font-size: 1.25em;
+  }
+
+div>p{
+  clear: both;
+  padding: 20px;
+}
+
+#firstDiv{
+  background-color: #ddd;
+
+}
+
+#secondDiv{
+  background-color: #ddd;
+
+}
+
+#thirdDiv{
+  background-color: #ddd;
+}
+
+#homePageH11{
+  background-color: #ffffff;
+
+}
+
+#homePageH12{
+  background-color: #d888dd;
+}
+
+#homePageH13{
+  background-color: #998;
+}
+
+/*good programing practice so as you dont change a lot of code for the from divs*/
+
+/*media styles*/
+
+/*large devices*/
+@media (min-width: 992px){
+/*dispay desktop version*/
+/*Do nothing here
+  */
+}
+
+/*medium devices */
+@media (min-width: 768px) and (max-width: 991px){
+/*display tablet version*/
+#firstDiv {
+  margin-left: 5%;
+  margin-right: 2.5%;/*because the next div will add to it*/
+  width: 42.5%;
+}
+
+#secondDiv {
+  margin-left: 2.5%;
+  margin-right: 5%;/*because the next div will add to it*/
+  width: 42.5%;
+}
+
+#thirdDiv{
+clear:left;
+margin-right: 5%;
+margin-left: 5%;
+width: 90%;
+  }
+
+
+}
+
+/*small devices and mobile phones*/
+@media (max-width: 767px){
+div{
+  width: 80%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+  #firstDiv{
+  clear:left;
+  margin: 2.5%;
+    }
+  #secondDiv{
+  clear:left;
+  margin: 2.5%;
+      }
+  #thirdDiv{
+  clear:left;
+  margin: 2.5%;
+
+      }
+div>h1{
+
+}
+}
