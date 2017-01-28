@@ -1,0 +1,61 @@
+body{
+      font-size: 16px;
+      color: black;
+      font-family: 'Raleway', sans-serif;
+      }
+#header-nav{
+      border-color: black;
+      border-radius: 0;/* no edge roundness*/
+      background-color: #e0e0e0;
+}
+/*black title hyperlinks*/
+#header-nav a{
+    color: black;
+}
+#mySiteWordLogoDiv{
+      height: 100px;
+}
+#centerMainDiv{
+  height: 1000px;
+  background-color: #eeeeee;
+}
+#myHeader{
+  background-color: #e0e0e0;
+}
+
+#collapsable-nav{
+  text-align: center;
+}
+
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar{
+  border:1px solid black;
+}
+
+.navbar-header button.navbar-toggle{
+  clear:both;
+  margin-top: -70px;
+}
+
+
+/** Here add your media queries**/
+@media (min-width: 1200px){
+
+}
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+@media (max-width: 767px){
+  #collapsable-nav{
+    background-color: white;
+  }
+  #list1,#list2{
+     border-bottom:1px solid black;
+  }
+
+}
+/** for your mobile screen change the backgroun color of
+ul#collapsable-nav to white and add borders i.e. target collapsable nav so as when the user
+clicks the dropdown menu the color is slightly diff from the site background
+**/
