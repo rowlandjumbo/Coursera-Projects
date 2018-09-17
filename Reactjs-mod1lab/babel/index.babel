@@ -1,0 +1,105 @@
+function AppTitle (props){
+  return (
+    <div>
+      <h2>{props.appTitle}</h2>
+      <p>{props.appDesc}</p>
+    </div>
+  )
+}
+
+
+
+function SelectOptionsDetails(props){
+  return(
+    <div>
+      <h2>{props.selectOptionsTitle}</h2>
+      {props.filterOption}
+      <input type="checkbox" id="coding" name="interest" value="coding" checked/>
+      <select>
+        <option value ="All">{props.optionValue[0]}</option>
+        <option value ="Cars">{props.optionValue[1]}</option>
+        <option value ="Trucks">{props.optionValue[2]}</option>
+        <option value ="Convertibles">{props.optionValue[3]}</option>
+      </select>
+    </div>
+  )
+}
+
+
+
+function ResultFullDetails(props){
+  return(
+    <div>
+      <h2>{props.resultFullDetails[0]}</h2>
+      <ul>
+          <table>
+              <tr>
+                  <th>Year</th>
+                  <th>Model</th>
+                  <th>Price</th>
+                  <th>Buy</th>
+              </tr>
+              <tr>
+                  <td>{props.resultFullDetails[1]}</td>
+                  <td>{props.resultFullDetails[2]}</td>
+                  <td>{props.resultFullDetails[3]}</td>
+                  <td><button>Buy Now</button></td>
+              </tr>
+          </table>
+      </ul>
+    </div>             
+  )
+}
+
+
+
+function ResultsContinued(props){
+  return(
+    <div>
+       <ul>
+        <table>
+            <tr>
+                <th>Year</th>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Buy</th>
+            </tr>
+            <tr>
+                <td>{props.resultContinuedDetails[0]}</td>
+                <td>{props.resultContinuedDetails[1]}</td>
+                <td>{props.resultContinuedDetails[2]}</td>
+                <td><button>Buy Now</button></td>
+            </tr>
+        </table>
+      </ul>
+    </div>
+  )
+}
+
+
+
+/*Application*/
+function ReactTransApp(){
+  return(
+    <div>
+      <AppTitle appTitle= "Welcome to React Transportation" appDesc="The best place to buy vehicles online"/>
+      <SelectOptionsDetails SelectOptionsTitle="Choose Options" filterOption="New Only" optionValue={["All", "Cars", "Trucks", "Convertibles"]}/>
+      <ResultFullDetails resultFullDetails= {["Cars","2013","A", "$32,000"]}/>
+      <ResultsContinued resultContinuedDetails={["2011", "B", "$4,400"]}/>
+      <ResultsContinued resultContinuedDetails={["2016", "B", "$15,500"]}/>
+      
+      <ResultFullDetails resultFullDetails= {["trucks","2014","D", "$18,000"]}/>
+      <ResultsContinued resultContinuedDetails={["2013", "E", "$5,200"]}/>
+      
+      <ResultFullDetails resultFullDetails= {["Convertibles","2009","F", "$2,000"]}/>
+      <ResultsContinued resultContinuedDetails={["2010", "G", "$6,000"]}/>
+      <ResultsContinued resultContinuedDetails={["2012", "H", "$12,500"]}/>
+      <ResultsContinued resultContinuedDetails={["2017", "M", "$50,000"]}/>
+    </div>
+  )
+}
+
+
+
+/*Rendering*/
+ReactDOM.render(<ReactTransApp/>, document.getElementById("root"))
